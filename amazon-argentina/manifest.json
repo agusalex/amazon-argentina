@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Filter - Ships to Argentina",
+  "version": "1.0",
+  "description": "Filters products on Amazon that do not ship to Argentina.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.amazon.com/s*",
+        "*://www.amazon.com/*/s*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
